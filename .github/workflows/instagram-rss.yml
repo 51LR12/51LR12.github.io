@@ -1,7 +1,7 @@
 name: RSS
 on:
   schedule:
-    - cron: "5 21 * * *"
+    - cron: "10 21 * * *"
   push:
 
 jobs:
@@ -16,8 +16,7 @@ jobs:
         uses: 51LR12.github.io/instagram-rss.yml
         with:
           yourInstagram: riverscrounger.media
-          listOfInstagrams: amoo._.maleh,amr.tabash,anas.ibrahem1,anas.sham0,anasabudayyah1,anasjamal44,ashraf_almajaida,asma_al_shaikh,atiadarwish,awad.abusharkh,bayanpalestine,belalkh,belalmortaja,hany_miqdad,hasona_salim,hassan_eslaih,hatem.h.rawagh,hazmaslman,hindkhoudary,hippiearab,hishamabushaqrah,hishamshaqrah,hla_benasfour,hossam.azam2,hossamwaill,hussein._.arafat_,hzabusabra,i.anasmatar,ibrahem.isbitah,imhawari,islam.s.safi,ismail_gh2,ismail.jood,issam.rimawi,joe_jayyab,joegaza93,khaled_al_sabbah,khaled_alsultan7,khaled_serr,khaledsafi,kinan.gaza,lama_jamous9,leila.shw,loayalsawafiri,wadeaa_.9,wael_eldahdouh,waeljarwann,mo_szourob,mohammed_fayq,mohammed_h_mno3,mohammed_n_imad,mohammed.qita,mohammedalbaradei,mohammedasad.84,nofal_i,noor.harazeen,nourarfaa1,omar_aldirawi,osama.s.ashi,palestineredcrescent,ph_youseeff,princekouta,qosai_hany,qusi.gaza,rabie_ noqaira,rahafmarwan20,rahafpro,Ramdanjazar,mahmoudsabbah2,mahmoudshurrab,majdi_fathi,moameneldanaf,moekouta,moh.lehya,moh.lubd,mohamaed_yunis,mohamed_obied77,mohamed.h.masri,mohameed.s.samara,mohammed_dahlan86,rami_saleim,roba_khaled_,saher_alghorra,saidsol1,saleemaburass,saleh_aljafarawi,samarabuelouf,sami97alsultan,samiaatrashzz,samyzyara,sara__alsaqqa,shababgaza,shadi_tabatiby,smaraa_s_mm,soliman__farra,solimanhijjy,ssaja43,sundos_morad7,tamer_ashraf11,twins_gaza_,bilal.hasanat,louay.shaban7,m_abuowda11,m.z.gaza,madhoun95,mahdy_zourob,mahmood_abu_alsoud,mahmoodkouta,mahmoud_awadia,mahmoud_maher_zaqout,mahmoud_shammala,mahmoud.photography97,mahmoudalghrbawi,mahmoudbassam8,malaloul,mansourshouman7,maqadema,mariam_abu_dagga,mariam.ashraf36,mo_.farid,mo_elhelo21,raghdaa_team,salameh.ibrahiem,jameel_artist,salmajadili,_doaa_mohammad,5__na1,a.dolla,a7mhisham,abd.pix96,abdallah_alattar1999,abdallah_mazen997,abdallah.dalee,abdelkouta,abdullahobead,abed_n_farhat,abed.abo.riash,abod_bt77,abood_alsayed2000,Abood.jamal77,abood.qassim7,aboodgaza,aborjelaa,aboud_obeid22,aboud_obeid3,abuoazzum,adelzharna21,afafpall_,ahmad_masoud__,ahmad.ibraa,ahmadwuhidi,ahmed_al_arini22,ahmed_al_danaf,ahmed.s.alzard,ahmed.ys3,ahmedhijazee,ahmedsahmoud1,ahmedsmiry,alhelou.y,alialturk24,alibasemkarraz,alii3bed,alijadallah66,almajd_free,Ameer_barhoom02,awnifarhat_,ayman_al_gedi,aymanalgedi12,baraa_elghalayini,basel_elmaqosui,basharzaneen,campsbreakerz,chalanhamza,daianaalbukhari,dawoud_aboalkas,dawoudfamily690,denatakruri,doaa_khaled.98,doaaj94,dr.ahmed.moghrabi,dr.haya.gaza,dr.mohamed.palestine,elina_yazji,emadsami0,esma3eel_omar,ezz.lulu,faiz_osama50,fayez.palestine,free.gaza.circus,gahnaim,gazastories23,gazasunbirds,ghadazaki14,hadeel_a_hammad,hamada.pr1,hamdaneldahdouh,hamoda_shahen,hamza_ghazali_,haneen_e12,haneenharara,hani.aburezeq,mohammedharar2,mohannad._.rash,mohmmed_awad89,montasersawaf,motasem.mortaja,muhammadsmiry,nadia_lens,nadinabdullatif,nisreendiary,nizar_sadawi,waleedq18,weam_badwen88,wissamgaza,wizard_bisan1,yaseenalshwaa,yasser.pix84,youmna_elsid,yusuf_labad,zaqouthisham,khaled_nabhann,jana.ihab.jaber,tala.ealiyan
-      - name: Commit files
+          listOfInstagrams: amoo._.maleh,amr.tabash,anas.ibrahem1,anas.sham0,anasabudayyah1,anasjamal44
         if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
         run: |
           git config --local user.email "action@github.com"
