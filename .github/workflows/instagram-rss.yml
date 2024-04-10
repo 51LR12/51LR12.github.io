@@ -9,8 +9,6 @@ jobs:
     runs-on: macOS-latest
     name: Generate RSS
     steps:
-      - name: Checkout
-        uses: .github/workflows/instagram-rss.yml
       - name: RSS
         id: rss
         uses: 51LR12.github.io/instagram-rss.yml
