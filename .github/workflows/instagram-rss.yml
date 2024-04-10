@@ -17,9 +17,10 @@ jobs:
         with:
           yourInstagram: riverscrounger.media
           listOfInstagrams: amoo._.maleh,amr.tabash,anas.ibrahem1,anas.sham0,anasabudayyah1,anasjamal44
-        if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -am "Updated instagram.json"
-          git push
+        - name: Commit files
+          if: ${{ success() && steps.rss.outputs.RSS_STATUS == 'success' }}
+          run: |
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git commit -am "Updated instagram.json"
+            git push
